@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer
+components {
+  .image-left {
+    order: -1; /* Déplace l'élément vers la gauche */
+  }
+
+  .image-right {
+    order: 1; /* Déplace l'élément vers la droite */
+  }
+
+  .link {
+    @apply cursor-pointer hover:underline;
+  }
+  .button-outline {
+    @apply rounded-md border-2 border-primary hover:bg-primary/80 hover:text-white duration-500 py-2 px-6 text-primary tracking-wider;
+  }
+
+  .primary-btn {
+    @apply bg-primary text-white hover:bg-secondary-300 hover:text-white duration-500 rounded-lg py-2 px-4;
+  }
+  .danger-btn {
+    @apply bg-red-600 text-white hover:bg-red-300 hover:text-white duration-500 rounded-lg py-2 px-4;
+  }
+  .login-btn {
+    @apply bg-white border-secondary-300 text-primary hover:bg-secondary-300/80  duration-500 rounded-lg py-2 px-4;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-10%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-slideIn {
+  animation: slideIn 0.3s ease-out;
+}

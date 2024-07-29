@@ -1,0 +1,52 @@
+
+.activate-button, .resend-button {
+  
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: opacity 0.3s ease;
+
+  background-color: transparent;
+  border: 2px solid #7654a7;
+  color: #000000;
+  font-weight:700;
+  margin-bottom:30px;
+
+}
+
+
+
+.resend-button:hover {
+  opacity: 0.8;
+}
+
+/* animations de success popup */
+
+/* animations.css */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes sandFlow {
+  0%, 100% { transform: translateY(-50%); }
+  50% { transform: translateY(50%); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.animate-slideInUp {
+  animation: slideInUp 0.5s ease-out;
+}
+
+.animate-sandFlow {
+  animation: sandFlow 2s infinite;
+}

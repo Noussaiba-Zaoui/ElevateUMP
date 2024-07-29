@@ -1,0 +1,34 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensure the modal overlay is on top */
+  }
+  
+  .modal-content {
+    position: relative;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    outline: none;
+  }
+  
+  .calendar-container {
+    position: relative;
+    z-index: 0; /* Ensure the calendar is below the modal */
+  }
+
+  .fc-col-header-cell.fc-timegrid-axis {
+    width: 200px !important; /* Adjust the width as needed */
+}
+
+.fc-timegrid-slot-label {
+    width: 200px !important; /* Adjust the width as needed */
+}
+  
