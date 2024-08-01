@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  backend:
+    image: myproject_backend
+    build:
+      context: ./backend/PFA_PROJECT
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/pfadb
+      - SPRING_DATASOURCE_USERNAME=knhi
+      - SPRING_DATASOURCE_PASSWORD=pass
+    depends_on:
+      - db
+
+  frontend:
+    image: myproject_frontend
+    container_name: frontend
+    build:
+      context: ./react-p2e
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+
+  db:
+    image: postgres:14
+    environment:
+      POSTGRES_DB: pfadb
+      POSTGRES_USER: knhi
+      POSTGRES_PASSWORD: pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
