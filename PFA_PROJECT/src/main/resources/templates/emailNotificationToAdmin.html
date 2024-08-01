@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> P2E-Nouveau utilisateur</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        div.container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333333;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #666666;
+            margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #cccccc;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            color: #333333;
+        }
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            margin: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #ffffff;
+        }
+        .btn-primary {
+            background-color: #228B22; /* Vert forêt */
+        }
+        .btn-danger {
+            background-color: #dc3545;
+        }
+        .btn:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Validation du compte utilisateur</h1>
+    <p>Bonjour <span th:text="${Admin}"></span>,</p>
+    <p>Un nouvel utilisateur s'est enregistré  veuillez acceder a la platforme pour voir les details:</p>
+    <table>
+        <tr>
+            <th>Informations sur le nouvel utilisateur</th>
+        </tr>
+        <tr>
+            <td><strong>Email de l'utilisateur :</strong> <span th:text="${email}"></span></td>
+        </tr>
+
+    </table>
+
+      <a class="btn btn-primary" th:href="${pendingURL}" target="_blank" style="color: #ffffff !important; text-decoration: none; border-radius: 6px; background-color: #228B22;">Voir details</a>
+
+
+
+</div>
+</body>
+</html>
