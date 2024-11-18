@@ -35,10 +35,10 @@ This project focuses on developing a **web application for project management** 
 ### Prerequisites:  
 Ensure the following tools are installed on your machine:  
 - [Docker](https://www.docker.com/)  
-- [Java 17](https://openjdk.org/projects/jdk/17/)  
+- [Java ](https://openjdk.org/projects/jdk/17/)  
 - [Node.js](https://nodejs.org/)
 
-- 
+
   
 ##  **📚 Additional Resources** 
 - Spring Security Documentation
